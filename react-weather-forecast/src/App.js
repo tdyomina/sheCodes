@@ -1,17 +1,21 @@
 import "./App.css";
+import Weather from "./Weather";
 
 export default function App() {
   return (
-    <div className="container">
-      <div className="App">
+    <div className="App">
+      <div className="container">
         <header className="App-header">
           <h1>Weather</h1>
+          <Weather />
         </header>
-        <p>
+        <footer>
           This page was coded by{" "}
           <a
             href="https://stellular-beijinho-c2bad9.netlify.app/about.html"
             target="_blank"
+            title="Tatiana's personal page"
+            rel="noreferrer"
           >
             Tatiana
           </a>
@@ -19,10 +23,12 @@ export default function App() {
           <a
             href="https://github.com/tdyomina/sheCodes/tree/main/react-weather-forecast"
             target="_blank"
+            title="GitHub link"
+            rel="noreferrer"
           >
             My Git.
           </a>
-        </p>
+        </footer>
       </div>
     </div>
   );
