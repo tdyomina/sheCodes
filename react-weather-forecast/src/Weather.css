@@ -5,3 +5,7 @@
 .Weather h2 {
   color: #878787;
 }
+
+.mainTemp {
+font-size: large;
+}
