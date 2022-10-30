@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "./Weather.css";
 import axios from "axios";
 import WeatherDetails from "./WeatherDetails";
-import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
-    const [weatherData, setWeatherData] = useState({ ready: false });
-    const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -66,19 +65,6 @@ export default function Weather(props) {
         <div className="row">
           <div className="col-6">
             <WeatherDetails data={weatherData} />
-          </div>
-
-          <div className="col-6">
-            <div className="d-flex">
-              <div>
-                <WeatherIcon code={props.data.icon} size={52} />
-              </div>
-
-              <div className="WeatherTemperature">
-                <span className="temperature">{Math.round(props.celsius)}</span>
-                <span className="unit">°C</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
